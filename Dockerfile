@@ -118,7 +118,7 @@ USER frappe
 COPY --from=builder --chown=frappe:frappe /home/frappe/frappe-bench /home/frappe/frappe-bench
 
 WORKDIR /home/frappe/frappe-bench
-COPY --chmod=755 entrypoint.sh .
+COPY --chmod=755 ./entrypoint.sh .
 
 VOLUME [ \
   "/home/frappe/frappe-bench/sites", \
